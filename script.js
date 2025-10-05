@@ -30,7 +30,7 @@ document.getElementById("feedback-form")?.addEventListener("submit", async funct
               { name: "📧 Email", value: email, inline: true },
               { name: "💬 Feedback", value: feedback }
             ],
-            footer: { text: "Portfolio Feedback webhook ☁️" },
+            footer: { text: "Portfolio Feedback bot ☁️" },
             timestamp: new Date()
           }
         ]
