@@ -438,80 +438,125 @@ footer {
         font-size: 1rem;
     }
   }
-/* Feedback Section */
+/* Feedback Section - With Smooth Transitions */
 .feedback {
-    background: white;
+    background: #f8f9fa;
     padding: 5rem 0;
     text-align: center;
-    animation: fadeInUp 1.5s ease both;
+    animation: fadeInUp 1.2s ease both;
 }
 
 .feedback h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #667eea;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease both;
 }
 
-.feedback-subtitle {
+.feedback p {
     font-size: 1.1rem;
-    margin-bottom: 3rem;
-    color: #666;
+    margin-bottom: 2rem;
+    color: #555;
+    animation: fadeInUp 1s ease 0.2s both;
 }
 
 .feedback-form {
     max-width: 600px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    animation: fadeInUp 1.8s ease both;
+    text-align: left;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease 0.4s both;
+    transition: box-shadow 0.3s ease;
 }
 
-.feedback-form input,
-.feedback-form textarea {
+.feedback-form:hover {
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feedback-form input:focus,
-.feedback-form textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: #667eea;
     box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
     outline: none;
 }
 
-.feedback-form .cta-button {
-    background: rgba(255, 255, 255, 0.2);
-    color: #667eea;
-    border: 2px solid #667eea;
-    padding: 12px 30px;
-    font-size: 1rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
+.field-info {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.3rem;
+    transition: color 0.3s ease;
 }
 
-.feedback-form .cta-button:hover {
-    background: #667eea;
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease 0.6s both;
 }
 
-/* Slow animation reused from existing style */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.loading {
+    display: inline-block;
+    margin-left: 10px;
+    color: #667eea;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.status-message {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #28a745;
+    transition: opacity 0.3s ease;
+    animation: fadeInUp 1s ease 0.8s both;
 }
