@@ -440,10 +440,10 @@ footer {
   }
 /* Feedback Section */
 .feedback {
-    background: #f8f9fa;
-    color: #333;
+    background: white;
     padding: 5rem 0;
     text-align: center;
+    animation: fadeInUp 1.5s ease both;
 }
 
 .feedback h2 {
@@ -464,6 +464,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    animation: fadeInUp 1.8s ease both;
 }
 
 .feedback-form input,
@@ -485,19 +486,32 @@ footer {
 }
 
 .feedback-form .cta-button {
-    align-self: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #667eea;
+    border: 2px solid #667eea;
     padding: 12px 30px;
-    color: white;
-    border-radius: 50px;
     font-size: 1rem;
-    font-weight: 500;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .feedback-form .cta-button:hover {
+    background: #667eea;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Slow animation reused from existing style */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
